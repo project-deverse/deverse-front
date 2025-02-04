@@ -61,7 +61,32 @@ function createAuthStore() {
         authState = state;
       })();
       return authState;
-    }
+    },
+    loginWithGoogle: async () => {
+      const response = await fetch('/auth/google');
+      const data = await response.json();
+      if (data.user) {
+        auth.login(data.user);
+      }
+    },
+    loginWithGitHub: async () => {
+      const response = await fetch('/auth/github');
+      const data = await response.json();
+      if (data.user) {
+        auth.login(data.user);
+      }
+    },
+    loginWithPasskey: async (passkey: string) => {
+      const response = await fetch('/auth/passkey', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ passkey })
+      });
+      const data = await response.json();
+      if (data.user) {
+        auth.login(data.user);
+      }
+    } 
   };
 }
 
