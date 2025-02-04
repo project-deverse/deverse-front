@@ -1,0 +1,71 @@
+.community-container, .board-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  h1 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+  }
+  
+  .board-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .board-item {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .board-item:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .board-item h2 {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color);
+  }
+  
+  .post-count {
+    font-size: 0.9rem;
+    color: var(--text-color-light);
+  }
+  
+  .post-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .post-table th, .post-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .post-table th {
+    background-color: var(--background-color-dark);
+    color: var(--text-color);
+    font-weight: bold;
+  }
+  
+  .post-item:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .post-title {
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  .error {
+    color: var(--error-color);
+    font-weight: bold;
+  }

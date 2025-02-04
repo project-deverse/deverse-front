@@ -1,0 +1,84 @@
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.login-box {
+  background-color: var(--primary-foreground-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-color);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.social-login-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  color: var(--primary-foreground-color);
+  font-size: 0.8rem;
+  padding: 0;
+}
+
+.google-login {
+  background-color: #ffffff;
+  color: #757575;
+  border: 1px solid #dadce0;
+}
+
+.github-login {
+  background-color: #68686e;
+}
+
+.passkey-login {
+  background-color: #86c9f5;
+}
+
+.social-login-button:hover {
+  opacity: 0.9;
+  transform: translateY(-3px);
+}
+
+.social-login-button:active {
+  transform: translateY(-1px);
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 0.25rem;
+}
+
+.error-message {
+  color: var(--error-color);
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
