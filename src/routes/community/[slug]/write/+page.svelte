@@ -2,6 +2,7 @@
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
     import { createPost } from '$lib/utils/api'; // 글쓰기 API 호출 함수
+import CartaEditor from "$lib/components/CartaEditor.svelte";
   
     let title = '';
     let content = '';
@@ -62,12 +63,7 @@
       </div>
       <div class="form-group">
         <label for="content">내용</label>
-        <textarea
-          id="content"
-          bind:value={content}
-          required
-          placeholder="내용을 입력하세요"
-        ></textarea>
+          <CartaEditor bind:value={content} />
       </div>
       <button
         type="submit"
@@ -84,29 +80,24 @@
       max-width: 600px;
       margin: 0 auto;
     }
-  
+
     .form-group {
       margin-bottom: 1rem;
     }
-  
+
     .form-group label {
       display: block;
       margin-bottom: 0.5rem;
       font-weight: bold;
     }
-  
-    .form-group input,
-    .form-group textarea {
+
+    .form-group input {
       width: 100%;
       padding: 0.5rem;
       border: 1px solid #ddd;
       border-radius: 4px;
     }
 
-    .form-group textarea {
-      height: 200px;
-    }
-  
     .submit-button {
       background-color: #28a745;
       color: white;
@@ -115,16 +106,16 @@
       border-radius: 4px;
       cursor: pointer;
     }
-  
+
     .submit-button:disabled {
       background-color: #94d3a2;
       cursor: not-allowed;
     }
-  
+
     .submit-button:hover:enabled {
       background-color: #218838;
     }
-  
+
     .error {
       color: red;
       margin-bottom: 1rem;

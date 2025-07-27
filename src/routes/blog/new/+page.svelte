@@ -2,15 +2,13 @@
 	import { goto } from '$app/navigation';
 	import { createBlogPost } from '$lib/utils/api';
 	import type { BlogPost } from '$lib/types';
-	import MarkdownEditor from '$lib/components/MarkdownEditor.svelte';
-	import HTMLEditor from '$lib/components/HTMLEditor.svelte';
-	import '$styles/editor.css';
+import CartaEditor from '$lib/components/CartaEditor.svelte';
+import '$styles/editor.css';
 
 	let title = '';
 	let content = '';
 	let thumbnail: File | null = null;
 	let error: string | null = null;
-	let editorMode: 'markdown' | 'html' = 'markdown';
 
 	async function handleSubmit() {
 		try {
@@ -32,9 +30,6 @@
 		}
 	}
 
-	function toggleEditorMode() {
-		editorMode = editorMode === 'markdown' ? 'html' : 'markdown';
-	}
 </script>
 
 <svelte:head>
@@ -58,35 +53,12 @@
 			<input type="file" id="thumbnail" accept="image/*" on:change={handleThumbnailChange} />
 		</div>
 
-		<div class="form-group">
-			<div class="editor-mode-switch">
-				<label>Content</label>
-				<div class="toggle-container">
-					<div class="toggle-switch">
-						<input
-							type="checkbox"
-							id="editor-toggle"
-							class="toggle-switch-checkbox"
-							checked={editorMode === 'html'}
-							on:change={toggleEditorMode}
-						/>
-						<label class="toggle-switch-label" for="editor-toggle">
-							<span class="toggle-switch-inner"></span>
-							<span class="toggle-switch-switch"></span>
-						</label>
-					</div>
-					<span class="toggle-label">{editorMode === 'markdown' ? 'Markdown' : 'HTML'}</span>
-				</div>
-			</div>
-
-			<div class="editor-container">
-				{#if editorMode === 'markdown'}
-					<MarkdownEditor bind:value={content} />
-				{:else}
-					<HTMLEditor bind:value={content} />
-				{/if}
-			</div>
-		</div>
+                <div class="form-group">
+                        <label>Content</label>
+                        <div class="editor-container">
+                                <CartaEditor bind:value={content} />
+                        </div>
+                </div>
 
 		{#if error}
 			<p class="error-message">{error}</p>

@@ -3,13 +3,11 @@
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 	import { createBlogPost, updateBlogPost, fetchBlogPost } from '$lib/utils/api';
-	import MarkdownEditor from '$lib/components/MarkdownEditor.svelte';
-	import HTMLEditor from '$lib/components/HTMLEditor.svelte';
+import CartaEditor from '$lib/components/CartaEditor.svelte';
 
 	let title = '';
 	let content = '';
 	let thumbnail: File | null = null;
-	let editorMode: 'markdown' | 'html' = 'markdown';
 	let isNewPost = true;
 
 	onMount(async () => {
@@ -23,11 +21,6 @@
 			}
 		}
 	});
-
-	function toggleEditorMode() {
-		editorMode = editorMode === 'markdown' ? 'html' : 'markdown';
-	}
-
 	function handleThumbnailChange(event: Event) {
 		const target = event.target as HTMLInputElement;
 		if (target.files) {
@@ -85,23 +78,9 @@
 			/>
 		</div>
 
-		<div>
-			<div class="flex justify-between mb-2">
-				<button
-					type="button"
-					on:click={toggleEditorMode}
-					class="px-4 py-2 bg-secondary text-secondary-foreground rounded"
-				>
-					Switch to {editorMode === 'markdown' ? 'HTML' : 'Markdown'} Editor
-				</button>
-			</div>
-
-			{#if editorMode === 'markdown'}
-				<MarkdownEditor bind:value={content} />
-			{:else}
-				<HTMLEditor bind:value={content} />
-			{/if}
-		</div>
+                <div>
+                        <CartaEditor bind:value={content} />
+                </div>
 
 		<button
 			type="submit"

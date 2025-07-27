@@ -15,7 +15,7 @@
 		class={viewMode === 'grid'
 			? 'bg-white rounded-lg shadow-md overflow-hidden'
 			: 'flex bg-white rounded-lg shadow-md overflow-hidden'}
-			>
+	>
 		<img
 			src={post.thumbnail}
 			alt={post.title}

@@ -1,73 +1,132 @@
 {
-    "blogPosts": [
-      {
-        "id": "1",
-        "title": "Getting Started with Svelte",
-        "content": "Svelte is a modern JavaScript framework that takes a unique approach to building user interfaces. Unlike traditional frameworks that do the bulk of their work in the browser, Svelte shifts that work into a compile step that happens when you build your app. This results in highly efficient, fast-running applications with a smaller footprint...",
-        "thumbnail": "https://example.com/images/svelte-thumbnail.jpg",
-        "authorId": "test-author",
-        "createdAt": "2023-06-01T12:00:00Z",
-        "updatedAt": "2023-06-01T12:00:00Z"
-      },
-      {
-        "id": "2",
-        "title": "Advanced TypeScript Techniques",
-        "content": "TypeScript, a typed superset of JavaScript, offers powerful features that can greatly enhance your development experience. In this post, we'll explore some advanced TypeScript techniques that can help you write more robust and maintainable code...",
-        "thumbnail": "https://example.com/images/typescript-thumbnail.jpg",
-        "authorId": "author2",
-        "createdAt": "2023-06-05T14:30:00Z",
-        "updatedAt": "2023-06-06T10:15:00Z"
-      },
-      {
-        "id": "3",
-        "title": "Building Responsive Layouts with Tailwind CSS",
-        "content": "Tailwind CSS is a utility-first CSS framework that allows you to rapidly build custom user interfaces. One of its strengths is how easy it makes creating responsive layouts. In this tutorial, we'll walk through the process of building a responsive layout using Tailwind CSS...",
-        "thumbnail": "https://example.com/images/tailwind-thumbnail.jpg",
-        "authorId": "author3",
-        "createdAt": "2023-06-10T09:45:00Z",
-        "updatedAt": "2023-06-10T09:45:00Z"
-      }
-    ],
-    "recentNews": [
-      {
-        "id": "1",
-        "title": "Svelte 4 Released",
-        "summary": "The Svelte team has announced the release of Svelte 4, bringing performance improvements and new features.",
-        "content": "Svelte 4 has been released, introducing significant performance improvements and several new features. The update includes better TypeScript support, improved hydration, and a smaller runtime...",
-        "createdAt": "2023-06-15T16:00:00Z"
-      },
-      {
-        "id": "2",
-        "title": "TypeScript 5.1 Now Available",
-        "summary": "Microsoft has released TypeScript 5.1 with new features and improvements.",
-        "content": "TypeScript 5.1 is now available, bringing several new features and improvements. This release includes better inference for tagged template strings, a new 'unspecified' type, and various performance enhancements...",
-        "createdAt": "2023-06-20T11:30:00Z"
-      }
-    ],
-    "users": [
-      {
-        "id": "test-author",
-        "name": "John Doe",
-        "email": "john@example.com",
-        "role": "author"
-      },
-      {
-        "id": "author2",
-        "name": "Jane Smith",
-        "email": "jane@example.com",
-        "role": "author"
-      },
-      {
-        "id": "author3",
-        "name": "Bob Johnson",
-        "email": "bob@example.com",
-        "role": "author"
-      },
-      {
-        "id": "user1",
-        "name": "Alice Brown",
-        "email": "alice@example.com",
-        "role": "user"
-      }
-    ]
-  }
+	"blogPosts": [
+		{
+			"id": "1",
+			"title": "Getting Started with Svelte",
+			"content": "Svelte is a modern JavaScript framework that takes a unique approach to building user interfaces. Unlike traditional frameworks that do the bulk of their work in the browser, Svelte shifts that work into a compile step that happens when you build your app. This results in highly efficient, fast-running applications with a smaller footprint...",
+			"thumbnail": "https://example.com/images/svelte-thumbnail.jpg",
+			"authorId": "test-author",
+			"createdAt": "2023-06-01T12:00:00Z",
+			"updatedAt": "2023-06-01T12:00:00Z"
+		},
+		{
+			"id": "2",
+			"title": "Advanced TypeScript Techniques",
+			"content": "TypeScript, a typed superset of JavaScript, offers powerful features that can greatly enhance your development experience. In this post, we'll explore some advanced TypeScript techniques that can help you write more robust and maintainable code...",
+			"thumbnail": "https://example.com/images/typescript-thumbnail.jpg",
+			"authorId": "author2",
+			"createdAt": "2023-06-05T14:30:00Z",
+			"updatedAt": "2023-06-06T10:15:00Z"
+		},
+		{
+			"id": "3",
+			"title": "Building Responsive Layouts with Tailwind CSS",
+			"content": "Tailwind CSS is a utility-first CSS framework that allows you to rapidly build custom user interfaces. One of its strengths is how easy it makes creating responsive layouts. In this tutorial, we'll walk through the process of building a responsive layout using Tailwind CSS...",
+			"thumbnail": "https://example.com/images/tailwind-thumbnail.jpg",
+			"authorId": "author3",
+			"createdAt": "2023-06-10T09:45:00Z",
+			"updatedAt": "2023-06-10T09:45:00Z"
+		}
+	],
+	"recentNews": [
+		{
+			"id": "1",
+			"title": "Svelte 4 Released",
+			"summary": "The Svelte team has announced the release of Svelte 4, bringing performance improvements and new features.",
+			"content": "Svelte 4 has been released, introducing significant performance improvements and several new features. The update includes better TypeScript support, improved hydration, and a smaller runtime...",
+			"createdAt": "2023-06-15T16:00:00Z"
+		},
+		{
+			"id": "2",
+			"title": "TypeScript 5.1 Now Available",
+			"summary": "Microsoft has released TypeScript 5.1 with new features and improvements.",
+			"content": "TypeScript 5.1 is now available, bringing several new features and improvements. This release includes better inference for tagged template strings, a new 'unspecified' type, and various performance enhancements...",
+			"createdAt": "2023-06-20T11:30:00Z"
+		}
+	],
+	"users": [
+		{
+			"id": "test-author",
+			"name": "John Doe",
+			"email": "john@example.com",
+			"role": "author"
+		},
+		{
+			"id": "author2",
+			"name": "Jane Smith",
+			"email": "jane@example.com",
+			"role": "author"
+		},
+		{
+			"id": "author3",
+			"name": "Bob Johnson",
+			"email": "bob@example.com",
+			"role": "author"
+		},
+		{
+			"id": "user1",
+			"name": "Alice Brown",
+			"email": "alice@example.com",
+			"role": "user"
+		}
+	],
+	"boards": [
+		{
+			"id": 1,
+			"name": "General",
+			"description": "General discussion",
+			"post_count": 2,
+			"created_at": "2023-06-01T12:00:00Z"
+		},
+		{
+			"id": 2,
+			"name": "Announcements",
+			"description": "Important announcements",
+			"post_count": 1,
+			"created_at": "2023-06-10T09:45:00Z"
+		}
+	],
+	"boardPosts": [
+		{
+			"id": 1,
+			"parent_id": null,
+			"title": "Welcome to General",
+			"content": "Feel free to talk about anything!",
+			"author": "test-author",
+			"board_id": 1,
+			"board_name": "General",
+			"comment_count": 0,
+			"created_at": "2023-06-02T10:00:00Z"
+		},
+		{
+			"id": 2,
+			"parent_id": null,
+			"title": "First Post",
+			"content": "This is the first post.",
+			"author": "author2",
+			"board_id": 1,
+			"board_name": "General",
+			"comment_count": 2,
+			"created_at": "2023-06-03T13:30:00Z"
+		},
+		{
+			"id": 3,
+			"parent_id": null,
+			"title": "Welcome to Announcements",
+			"content": "Announcements will be posted here.",
+			"author": "author3",
+			"board_id": 2,
+			"board_name": "Announcements",
+			"comment_count": 0,
+			"created_at": "2023-06-11T12:00:00Z"
+		}
+	],
+	"wikiPages": [
+		{
+			"id": "1",
+			"title": "Getting Started",
+			"content": "Welcome to the wiki.",
+			"lastUpdated": "2023-06-15T00:00:00Z"
+		}
+	]
+}
